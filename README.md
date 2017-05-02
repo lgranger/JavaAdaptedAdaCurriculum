@@ -1,6 +1,6 @@
 This is an copy of the cohort 4 Ada Developers Academy curiculum adapted to learn Java. It was adapted by cohort 4 graduate [Lauren Granger](github.com/lgranger).
 
-[Original Classroom Calendar](github.com/Ada-Developers-Academy/daily-curriculum/blob/master/cohort_schedules/C04_internship.md)
+[Original Classroom Calendar](http://github.com/Ada-Developers-Academy/daily-curriculum/blob/master/cohort_schedules/C04_internship.md)
 
 [Java Adapted Calendar](cohort_schedules/C04_classroom.md)
 
