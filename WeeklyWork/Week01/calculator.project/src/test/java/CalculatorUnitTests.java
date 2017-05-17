@@ -10,18 +10,17 @@ import static junit.framework.TestCase.assertEquals;
 public class CalculatorUnitTests {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+    private final PrintStream psOut = new PrintStream(outContent);
+
 
     @Before
     public void setUpStreams() {
-        System.setOut(new PrintStream(outContent));
-        System.setErr(new PrintStream(errContent));
+        System.setOut(psOut);
     }
 
     @After
     public void cleanUpStreams() {
         System.setOut(null);
-        System.setErr(null);
     }
 
     @Test
@@ -31,8 +30,9 @@ public class CalculatorUnitTests {
 
         // When
         calculator.main();
+        String[] outArray = outContent.toString().split("\n");
 
         // Then
-        assertEquals("Welcome to Calculator!\n", outContent.toString());
+        assertEquals("Welcome to Calculator!", outArray[0]);
     }
 }
